@@ -68,8 +68,8 @@ public class Person {
 	 * method to display all the information related to the person class
 	 */
 	public void displayAll() {
-		System.out.println("First name \t\t :" + this.firstName);
-		System.out.println("Last name \t\t :" + this.lastName);
+		System.out.println("First name \t\t : " + this.firstName);
+		System.out.println("Last name \t\t : " + this.lastName);
 
 	}
 	

@@ -37,7 +37,7 @@ public class SupportStaff extends Staff implements IPayable {
 	public SupportStaff(String firstName, String lastName, int staffId, 
 			double contractHours ) {
 		super(firstName, lastName, staffId);
-		this.contractHours = contractHours;
+		this.setContractHours(contractHours);
 	}
 	
 	/**
@@ -54,6 +54,7 @@ public class SupportStaff extends Staff implements IPayable {
 	public void setContractHours(double contractHours) {
 		if(contractHours < 1 || contractHours > 160) {
 			contractHours = 0;
+			System.out.println("Error in setting support staff contracted hours, defaulted to 0.");
 		}else {
 			this.contractHours = contractHours;	
 		}
@@ -72,7 +73,7 @@ public class SupportStaff extends Staff implements IPayable {
 	@Override
 	public void displayAll() {
 		super.displayAll();
-		System.out.println("Contract hours \t\t: " + this.contractHours);
+		System.out.printf("Contract hours  \t: %.2f" , this.contractHours);
 	}
 
 	/**
@@ -81,7 +82,7 @@ public class SupportStaff extends Staff implements IPayable {
 	@Override
 	public double calculateMonthlyWage() {
 		double answer = contractHours * supportStaffFixedRate;
-		System.out.println("Support staff wages: £" + answer);
+		System.out.printf("\nSupport staff wages \t: £%.2f" , answer);
 		return answer;
 	}
 

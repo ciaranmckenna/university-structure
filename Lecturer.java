@@ -78,7 +78,7 @@ public class Lecturer extends Staff implements IPayable {
 		if (grade >= 1 && grade <= 3) {
 			this.grade = grade;
 		} else {
-			System.out.println("Error in setting grade");
+			System.out.println("Error in setting Lecturer grade, defaulted to grade 1, reflected in salary amount.");
 			this.grade = 1;
 		}
 	}
@@ -89,8 +89,8 @@ public class Lecturer extends Staff implements IPayable {
 	@Override
 	public void displayAll() {
 		super.displayAll();
-		System.out.println("School \t\t : " + school);
-		System.out.println("Grade \t\t : " + grade);
+		System.out.println("School \t\t\t : " + school);
+		System.out.println("Grade \t\t\t : " + grade);
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class Lecturer extends Staff implements IPayable {
 			System.out.println("Default setting");
 			break;
 		}
-		System.out.printf("Lecturer wages : £%.2f", salary);
+		System.out.printf("Lecturer wages \t\t : £%.2f", salary);
 		System.out.println();
 		return salary;
 	}

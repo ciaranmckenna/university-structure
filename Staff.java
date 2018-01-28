@@ -42,7 +42,7 @@ public class Staff extends Person {
 	@Override
 	public void displayAll() {
 		super.displayAll();
-		System.out.println("StaffId : \t\t " + staffId);
+		System.out.println("StaffId  \t\t : " + staffId);
 	}
 
 }
